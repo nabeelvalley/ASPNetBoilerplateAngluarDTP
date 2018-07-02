@@ -8,7 +8,7 @@ import * as moment from "moment";
 })
 export class DatePickerComponent implements OnInit {
   @Input("date") date: moment.Moment = moment();
-  @Output() dateChanged: EventEmitter<any> = new EventEmitter<any>();
+  @Output() onChange: EventEmitter<any> = new EventEmitter<any>();
 
   day: number;
   maxDay: number = 31;
@@ -53,7 +53,7 @@ export class DatePickerComponent implements OnInit {
       this.date.set("hour", 12);
       this.date.set("minute", 0);
       this.date.set("second", 0);
-      this.dateChanged.emit(this.date);
+      this.onChange.emit(this.date);
     } else {
       this.date = null;
     }
