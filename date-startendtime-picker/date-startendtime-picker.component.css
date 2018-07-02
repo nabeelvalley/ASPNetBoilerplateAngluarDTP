@@ -1,0 +1,23 @@
+.date {
+    display: grid;
+    padding: 5px;
+    grid-template-columns: 60px 110px 70px;
+    /* grid-template-columns: minmax(60px, 1fr) minMax(110px, 3fr) minmax(70px, 2fr); */
+}
+
+.time-start-end {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 186px);
+}
+.time {
+    display: grid;
+    align-items: center;
+    padding: 5px;
+    grid-template-columns: 50px 50px 10px 50px;
+}
+
+.time > label {
+    font-weight: 200;
+    margin: 0px;
+    margin-top: 5px;
+}

@@ -1,0 +1,40 @@
+<div class="form-group form-float">
+  <div class="date">
+    <div class="form-line">
+      <input class="form-control" type="number" placeholder="Day" min="1" max="{{ maxDay }}" [(ngModel)]="day" (change)="updateDate()">
+    </div>
+    <div class="form-line">
+      <select name="month-select" class="form-control" [(ngModel)]="month" (change)="updateDate()">
+        <option value="-1" selected>Month</option>
+        <option *ngFor="let val of months" [value]="val.ind">{{ val.text }}</option>
+      </select>
+    </div>
+    <div class="form-line">
+      <input class="form-control" type="number" placeholder="Year" min="1900" max="2100" [(ngModel)]="year" (change)="updateDate()">
+    </div>
+  </div>
+  <div class="time-start-end">
+    <div class="time">
+      <label>Start:</label>
+      <div class="form-line">
+        <input class="form-control" type="number" placeholder="" min="0" max="23" [(ngModel)]="startHour" (change)="updateDate()">
+      </div>
+      <label>:</label>
+      <div class="form-line">
+        <input class="form-control" type="number" placeholder="" min="0" max="59" [(ngModel)]="startMin" (change)="updateDate()">
+      </div>
+    </div>
+    <div class="time">
+      <label>End:</label>
+      <div class="form-line">
+        <input class="form-control" type="number" placeholder="" min="minHour" max="23" [(ngModel)]="endHour" (change)="updateDate()"
+          (click)="updateDate()">
+      </div>
+      <label>:</label>
+      <div class="form-line">
+        <input class="form-control" type="number" placeholder="" min="minMinute" max="59" [(ngModel)]="endMin" (change)="updateDate()"
+          (click)="updateDate()">
+      </div>
+    </div>
+  </div>
+</div>

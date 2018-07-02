@@ -1,0 +1,17 @@
+.date {
+    display: grid;
+    padding: 5px;
+    grid-template-columns: 60px 110px 70px;
+}
+
+.time {
+    display: grid;
+    align-items: center;
+    padding: 5px;
+    grid-template-columns: 50px 50px 10px 50px;
+}
+
+.time > label {
+    font-weight: 200;
+    margin: 0px;
+}

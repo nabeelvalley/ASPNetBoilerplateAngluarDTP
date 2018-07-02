@@ -1,0 +1,5 @@
+.date {
+    display: grid;
+    padding: 5px;
+    grid-template-columns: 60px 110px 70px;
+}
