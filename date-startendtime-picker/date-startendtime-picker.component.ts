@@ -19,7 +19,7 @@ export class DateStartendtimePickerComponent extends AppComponentBase
   @Input("startDate") startDate: moment.Moment = moment();
   @Input("endDate") endDate: moment.Moment = moment();
 
-  @Output() timeChanged: EventEmitter<any> = new EventEmitter<any>();
+  @Output() onChange: EventEmitter<any> = new EventEmitter<any>();
 
   startHour: any;
   endHour: any;
@@ -102,7 +102,7 @@ export class DateStartendtimePickerComponent extends AppComponentBase
       this.endDate.set("minute", this.endMin);
       this.endDate.set("second", 0);
 
-      this.timeChanged.emit([this.startDate, this.endDate]);
+      this.onChange.emit([this.startDate, this.endDate]);
     } else {
       this.startDate = null;
       this.endDate = null;
