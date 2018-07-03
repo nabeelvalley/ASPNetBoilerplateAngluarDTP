@@ -7,8 +7,8 @@ import * as moment from "moment";
   styleUrls: ["./date-picker.component.css"]
 })
 export class DatePickerComponent implements OnInit {
-  @Input("date") date: Moment = moment();
-  @Output() onChange: EventEmitter<Moment> = new EventEmitter<Moment>();
+  @Input("date") date: moment.Moment = moment();
+  @Output() onChange: EventEmitter<moment.Moment> = new EventEmitter<moment.Moment>();
 
   day: number;
   maxDay: number = 31;

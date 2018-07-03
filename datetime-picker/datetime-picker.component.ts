@@ -7,8 +7,8 @@ import * as moment from "moment";
   styleUrls: ["./datetime-picker.component.css"]
 })
 export class DatetimePickerComponent implements OnInit {
-  @Input("date") date: Moment = moment();
-  @Output() onChange: EventEmitter<Moment> = new EventEmitter<Moment>();
+  @Input("date") date: moment.Moment = moment();
+  @Output() onChange: EventEmitter<moment.Moment> = new EventEmitter<moment.Moment>();
 
   hour: any = 0;
   min: any = 0;

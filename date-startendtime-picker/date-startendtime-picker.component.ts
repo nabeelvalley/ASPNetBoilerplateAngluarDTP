@@ -14,10 +14,10 @@ import * as moment from "moment";
   styleUrls: ["./date-startendtime-picker.component.css"]
 })
 export class DateStartendtimePickerComponent implements OnInit {
-  @Input("startDate") startDate: Moment = moment();
-  @Input("endDate") endDate: Moment = moment();
+  @Input("startDate") startDate: moment.Moment = moment();
+  @Input("endDate") endDate: moment.Moment = moment();
 
-  @Output() onChange: EventEmitter<Moment[]> = new EventEmitter<Moment[]>();
+  @Output() onChange: EventEmitter<moment.Moment[]> = new EventEmitter<moment.Moment[]>();
 
   startHour: any;
   endHour: any;
