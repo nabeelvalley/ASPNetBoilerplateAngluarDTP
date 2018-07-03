@@ -7,19 +7,17 @@ import {
   EventEmitter
 } from "@angular/core";
 import * as moment from "moment";
-import { AppComponentBase } from "@shared/app-component-base";
 
 @Component({
-  selector: "app-date-startendtime-picker",
+  selector: "date-startendtime-picker",
   templateUrl: "./date-startendtime-picker.component.html",
   styleUrls: ["./date-startendtime-picker.component.css"]
 })
-export class DateStartendtimePickerComponent extends AppComponentBase
-  implements OnInit {
-  @Input("startDate") startDate: moment.Moment = moment();
-  @Input("endDate") endDate: moment.Moment = moment();
+export class DateStartendtimePickerComponent implements OnInit {
+  @Input("startDate") startDate: Moment = moment();
+  @Input("endDate") endDate: Moment = moment();
 
-  @Output() onChange: EventEmitter<any> = new EventEmitter<any>();
+  @Output() onChange: EventEmitter<Moment[]> = new EventEmitter<Moment[]>();
 
   startHour: any;
   endHour: any;
@@ -49,9 +47,7 @@ export class DateStartendtimePickerComponent extends AppComponentBase
   month: number;
   year: any;
 
-  constructor(injector: Injector) {
-    super(injector);
-  }
+  constructor() {}
 
   ngOnInit(): void {
     this.day = this.startDate.date();

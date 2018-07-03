@@ -2,13 +2,13 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 import * as moment from "moment";
 
 @Component({
-  selector: "app-date-picker",
+  selector: "date-picker",
   templateUrl: "./date-picker.component.html",
   styleUrls: ["./date-picker.component.css"]
 })
 export class DatePickerComponent implements OnInit {
-  @Input("date") date: moment.Moment = moment();
-  @Output() onChange: EventEmitter<any> = new EventEmitter<any>();
+  @Input("date") date: Moment = moment();
+  @Output() onChange: EventEmitter<Moment> = new EventEmitter<Moment>();
 
   day: number;
   maxDay: number = 31;
