@@ -1,6 +1,7 @@
 # Angular Datetime Picker for ABP
 
-An Angular Datetime Picker set to output dates as moment.
+An Angular Datetime Picker that outputs dates as moment.
+The npm package can be found [here](https://www.npmjs.com/package/angulardatetimepicker)
 
 ## Usage
 ### App Module
