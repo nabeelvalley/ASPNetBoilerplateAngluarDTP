@@ -12,13 +12,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 ...
 @NgModule({
   declarations: [
-	...
+    ...
     DatePickerComponent,
     DatetimePickerComponent,
     DateStartendtimePickerComponent
   ],
   imports: [
-   ...
+    ...
     FormsModule
   ],
 ```
@@ -27,8 +27,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 The inital date can be set via the `date` input, if this is not provided the initial value will be the current date
 
 ```typescript
-  @Input("date") date: Moment = moment(); //Optional
-  @Output() onChange: EventEmitter<Moment> = new EventEmitter<Moment>();
+  @Input("date") date: moment.Moment = moment(); //Optional
+  @Output() onChange: EventEmitter<moment.Moment> = new EventEmitter<moment.Moment>();
 ```
 
 The onChange event will fire if and when the date is changed and is complete
@@ -40,7 +40,7 @@ The onChange event will fire if and when the date is changed and is complete
 
 #### Typescript
 ```typescript
-  onChangeHandler(date: Moment){
+  onChangeHandler(date: moment.Moment){
     this.date = date;
   }
 ```
@@ -49,8 +49,8 @@ The onChange event will fire if and when the date is changed and is complete
 The inital date can be set via the `date` input, if this is not provided the initial value will be the current date
 
 ```typescript
-  @Input("date") date: Moment = moment(); //Optional
-  @Output() onChange: EventEmitter<Moment> = new EventEmitter<Moment>();
+  @Input("date") date: moment.Moment = moment(); //Optional
+  @Output() onChange: EventEmitter<moment.Moment> = new EventEmitter<moment.Moment>();
 ```
 
 The onChange event will fire if and when the date is changed and is complete
@@ -62,7 +62,7 @@ The onChange event will fire if and when the date is changed and is complete
 
 #### Typescript
 ```typescript
-  onChangeHandler(date: Moment){
+  onChangeHandler(date: moment.Moment){
     this.date = date;
   }
 ```
@@ -71,10 +71,10 @@ The onChange event will fire if and when the date is changed and is complete
 The inital datetimes  can be set via the `startDate` and `endDate` inputs, if this is not provided the initial values will be the current date and time
 
 ```typescript
-  @Input("startDate") startDate: Moment = moment(); //Optional
-  @Input("endDate") endDate: Moment = moment(); //Optional
+  @Input("startDate") startDate: moment.Moment = moment(); //Optional
+  @Input("endDate") endDate: moment.Moment = moment(); //Optional
   
-  @Output() onChange: EventEmitter<Moment[]> = new EventEmitter<Moment[]>();
+  @Output() onChange: EventEmitter<moment.Moment[]> = new EventEmitter<moment.Moment[]>();
 ```
 
 The onChange event will fire if and when the date is changed and is complete
@@ -86,7 +86,7 @@ The onChange event will fire if and when the date is changed and is complete
 
 #### Typescript
 ```typescript
-  onChangeHandler(dates: Moment[]){
+  onChangeHandler(dates: moment.Moment[]){
     this.start = dates[0];
     this.end = dates[1];
   }
